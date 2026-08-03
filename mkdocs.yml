@@ -22,6 +22,7 @@ theme:
     - content.code.copy
     - content.code.annotate
     - content.action.edit
+    - content.tabs.link
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default

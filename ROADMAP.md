@@ -1,70 +1,194 @@
 # Roadmap
 
-The scope of v1.0 is the six parts of the handbook. This file breaks that into milestones
-and maps each to a chapter branch.
+Ten releases, each one a coherent slice a reader can use on its own. Progress is tracked
+in GitHub milestones; this file is the plan of record.
 
-Progress is tracked in GitHub milestones; this file is the plan of record.
+| Version | Theme | Covers | Branch | Status |
+| --- | --- | --- | --- | --- |
+| [v0.1](#v01-repository-foundation) | Repository Foundation | Structure, tooling, CI | `main` | ✅ Done |
+| [v0.2](#v02-dart-mastery) | Dart Mastery | Part 1 — language | `feature/chapter-01` | 🚧 Next |
+| [v0.3](#v03-flutter-internals) | Flutter Internals | Part 1 — framework, native | `feature/chapter-01` | ⬜ Planned |
+| [v0.4](#v04-architecture) | Architecture | Part 2 — structure, layers, state | `feature/chapter-02` | ⬜ Planned |
+| [v0.5](#v05-networking) | Networking | Part 3 — data and persistence | `feature/chapter-02` | ⬜ Planned |
+| [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | ⬜ Planned |
+| [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | ⬜ Planned |
+| [v0.8](#v08-testing) | Testing | Part 2 — testing | `feature/chapter-03` | ⬜ Planned |
+| [v0.9](#v09-enterprise-flutter) | Enterprise Flutter | Part 5, CI/CD, release | `release/v1.0` | ⬜ Planned |
+| [v1.0](#v10-complete-engineering-handbook) | Complete Handbook | Part 6, appendix, editorial pass | `release/v1.0` | ⬜ Planned |
+
+Each release ships when its **done when** line is true, not when its checkboxes are all
+ticked — a page that exists but says nothing useful does not count.
 
 ---
 
-## Milestone 1 — Foundations (`v0.1`)
+## v0.1 — Repository Foundation
+
+> Branch: `main` · **Complete**
+
+The scaffolding that lets everything else be written without further plumbing.
+
+- [x] MkDocs Material site with the full six-part structure outlined
+- [x] `code/` package for runnable samples embedded into pages
+- [x] CI: code checks gate the site build, `main` deploys to Pages
+- [x] MIT license, Code of Conduct, contributing guide, style guide
+- [x] Issue and PR templates, CODEOWNERS, Dependabot
+- [x] Helper scripts: `serve`, `build`, `check`, `new-page`
+
+**Done when:** a contributor can clone, run `./scripts/check.sh`, and open a PR without
+asking how anything works. ✅
+
+---
+
+## v0.2 — Dart Mastery
 
 > Branch: `feature/chapter-01` · Part 1
 
-The language and framework layer. Nothing here depends on an architectural opinion.
+The language, and specifically the parts Flutter leans on hardest.
 
-- [ ] Dart — language essentials, null safety, async and concurrency, isolates
-- [ ] Widgets, elements and render objects
-- [ ] Rendering pipeline
-- [ ] Widget lifecycle
-- [ ] Constraints and layout
+- [ ] Language essentials — records, patterns, sealed classes, extensions
+- [ ] Null safety — soundness, `late`, migration, why `!` is a design smell
+- [ ] Async and concurrency — event loop, microtask queue, Future vs Stream
+- [ ] Isolates — the model, `compute()` vs long-lived, when you actually need one
+
+**Done when:** a reader can predict the output order of interleaved `await`, microtask,
+and timer callbacks, and explain why.
+
+---
+
+## v0.3 — Flutter Internals
+
+> Branch: `feature/chapter-01` · Part 1, plus native integration
+
+How a frame is produced, and what happens at the edge of the framework.
+
+- [ ] Widgets, elements and render objects — the three trees
+- [ ] Rendering pipeline — build, layout, paint, composite
+- [ ] Widget lifecycle — every callback, in order, with its correct use
+- [ ] Constraints and layout — the constraint model, unbounded errors, custom layout
+- [ ] Platform channels — MethodChannel, EventChannel, Pigeon
+- [ ] Dart FFI — when it beats a channel, ffigen, memory ownership
+- [ ] Writing plugins — federated structure, publishing
 
 **Done when:** a reader can explain what happens between `setState` and a pixel, and why
-a widget rebuilt.
+a given widget rebuilt.
 
 ---
 
-## Milestone 2 — Professional Flutter (`v0.2`)
+## v0.4 — Architecture
 
-> Branch: `feature/chapter-02` · Parts 2 and 3
+> Branch: `feature/chapter-02` · Part 2
 
-How an app is put together, how its state moves, and where its data lives.
+How an app is put together and how its state moves.
 
-- [ ] Project structure and tooling
-- [ ] Clean Architecture, dependency injection, navigation, error handling
-- [ ] State management — choosing, Riverpod, BLoC
-- [ ] Testing — unit, widget, integration, golden
-- [ ] Data — networking, offline first, SQLite, Drift, Isar, Hive
+- [ ] Project structure — feature-first vs layer-first, when to split packages
+- [ ] Tooling — analyzer, formatter, code generation
+- [ ] Clean Architecture — layers, entities vs DTOs, when it is overkill
+- [ ] Dependency injection — constructor first, get_it, scoping, testing seams
+- [ ] Navigation — go_router, deep links, auth guards
+- [ ] Error handling — Result vs exceptions, zone guards, crash reporting
+- [ ] Choosing a state management approach — the decision guide
+- [ ] Riverpod — providers, AsyncNotifier, scoping, anti-patterns
+- [ ] BLoC — Cubit vs Bloc, event transformers, when the ceremony pays off
 
 **Done when:** a reader can defend a layering and a state management choice against the
-alternatives, with tradeoffs named.
+alternatives, with tradeoffs named rather than asserted.
 
 ---
 
-## Milestone 3 — Production (`v0.3`)
+## v0.5 — Networking
+
+> Branch: `feature/chapter-02` · Part 3
+
+The data layer, where most production bugs live.
+
+- [ ] Networking — dio vs http, interceptors, timeouts, serialization
+- [ ] Offline first — cache strategies, outbox pattern, conflict resolution
+- [ ] SQLite — schema design, migrations without data loss, indexing
+- [ ] Drift — type-safe SQL, DAOs, schema versioning, reactive queries
+- [ ] Isar — collections, indexes, watchers, migration strategy
+- [ ] Hive — boxes, adapters, encryption, where it stops scaling
+
+**Done when:** a reader can design a sync layer that survives a flaky network without
+losing a write, and pick a local database for a stated workload.
+
+---
+
+## v0.6 — Security
 
 > Branch: `feature/chapter-03` · Part 4
 
-Everything between "it works on my machine" and "it works on a stranger's phone."
+The binary runs on the attacker's device. Plan accordingly.
 
-- [ ] Security — secure storage, network security, obfuscation and hardening
-- [ ] Performance — rendering, memory, build size, profiling
-- [ ] Native integration — platform channels, FFI, plugins
-- [ ] CI/CD — GitHub Actions, flavors, release process
+- [ ] Secure storage — Keychain, Keystore, token rotation, biometric gating
+- [ ] Network security — TLS, pinning and its rotation risk, secrets off the client
+- [ ] Obfuscation and hardening — symbol files, integrity checks and their limits
 
-**Done when:** a reader has a repeatable workflow for finding and fixing a dropped frame,
-a leak, and a flaky test.
+**Done when:** a reader can state what each measure does and does not prevent, and
+name the operational cost of pinning before shipping it.
 
 ---
 
-## Milestone 4 — Scale & Careers (`v1.0`)
+## v0.7 — Performance
 
-> Branch: `release/v1.0` · Parts 5 and 6, appendix
+> Branch: `feature/chapter-03` · Part 4
 
-- [ ] Enterprise Flutter — modularization, team workflow, observability, design systems
-- [ ] Interviews — system design, coding round, question bank, HR round
+Measure, then fix. Mostly about measuring.
+
+- [ ] Rendering — rebuild scope, RepaintBoundary, shader jank, list performance
+- [ ] Memory — leak sources, image cache, DevTools memory view, leak tests
+- [ ] Build size — `--analyze-size`, split ABIs, asset subsetting, deferred components
+- [ ] Profiling — the reproduce/measure/change-one-thing loop, UI vs raster thread
+
+**Done when:** a reader has a repeatable workflow for finding the cause of a dropped
+frame, and reports numbers with the device named.
+
+---
+
+## v0.8 — Testing
+
+> Branch: `feature/chapter-03` · Part 2
+
+A suite people trust and actually run.
+
+- [ ] Unit tests — testable structure, mocks vs fakes, async, coverage as signal
+- [ ] Widget tests — finders, matchers, pump vs pumpAndSettle, injecting dependencies
+- [ ] Integration tests — real flows, device farms, reducing flakiness
+- [ ] Golden tests — setup, font loading, CI rendering differences, updating goldens
+
+**Done when:** a reader can diagnose a flaky test rather than retry it, and knows which
+level to test a given behaviour at.
+
+---
+
+## v0.9 — Enterprise Flutter
+
+> Branch: `release/v1.0` · Part 5, plus CI/CD
+
+What changes at forty engineers and a five-year horizon.
+
+- [ ] Modularization — Melos, package boundaries, build times, dependency rules
+- [ ] Team workflow — branching, review standards, ADRs, onboarding
+- [ ] Observability — crash symbolication, structured logging, analytics, feature flags
+- [ ] Design systems — theme extensions, component packages, versioning
+- [ ] GitHub Actions — caching, matrix builds, keeping CI under ten minutes
+- [ ] Flavors — Android flavors, iOS schemes, `--dart-define`, per-flavor config
+- [ ] Release process — versioning, signing, staged rollout, rollback
+
+**Done when:** a reader can take a green commit to a store listing without a
+release-day scramble, and roll it back if it goes wrong.
+
+---
+
+## v1.0 — Complete Engineering Handbook
+
+> Branch: `release/v1.0` · Part 6, appendix, cheatsheets
+
+- [ ] Mobile system design — a framework plus worked examples
+- [ ] Coding round — live tasks, take-homes, internals questions
+- [ ] Question bank — by level, each with what a strong answer contains
+- [ ] HR round — STAR answers, levelling, negotiation
 - [ ] Appendix — glossary, further reading, tooling reference
-- [ ] Cheatsheets
+- [ ] Cheatsheets — lifecycle, testing, performance checklist
 - [ ] Full editorial pass against the style guide
 
 **Done when:** every page has content, no page is marked *Draft*, and `mkdocs build
@@ -74,7 +198,7 @@ a leak, and a flaky test.
 
 ## Ongoing
 
-Not tied to a milestone, welcome at any time:
+Not tied to a release, welcome at any time:
 
 - Corrections and version updates as Flutter releases land
 - Measured numbers replacing assertions
@@ -88,9 +212,10 @@ Not tied to a milestone, welcome at any time:
 ```
 main                 Stable, published site. Protected — PRs only.
 develop              Integration branch. Chapters merge here first.
-feature/chapter-NN   One milestone's content. Branched from develop.
-release/v1.0         Release stabilisation. Branched from develop, merged to
-                     main and back to develop, then tagged.
+feature/chapter-01   v0.2 – v0.3   Foundations
+feature/chapter-02   v0.4 – v0.5   Architecture and data
+feature/chapter-03   v0.6 – v0.8   Production concerns
+release/v1.0         v0.9 – v1.0   Stabilisation, then tag and merge to main
 ```
 
 Day to day:
@@ -103,5 +228,14 @@ git push -u origin feature/chapter-01
 # open a PR into develop
 ```
 
-Smaller work that does not belong to a chapter — a correction, a CI fix — branches from
+Each version is tagged on `main` once its **done when** line is true:
+
+```bash
+git switch main
+git merge --no-ff release/v1.0
+git tag -a v1.0.0 -m "Complete Engineering Handbook"
+git push origin main --tags
+```
+
+Smaller work that does not belong to a release — a correction, a CI fix — branches from
 `develop` as `fix/...`, `docs/...`, or `chore/...` and merges back the same way.
