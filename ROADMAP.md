@@ -11,8 +11,8 @@ in GitHub milestones; this file is the plan of record.
 | [v0.4](#v04-architecture) | Architecture | Part 2 — structure, layers, state | `feature/chapter-02` | ✅ Done |
 | [v0.5](#v05-networking) | Networking | Part 3 — data and persistence | `feature/chapter-02` | ✅ Done |
 | [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | ✅ Done |
-| [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | 🚧 Next |
-| [v0.8](#v08-testing) | Testing | Part 2 — testing | `feature/chapter-03` | ⬜ Planned |
+| [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | ✅ Done |
+| [v0.8](#v08-testing) | Testing | Part 2 — testing | `feature/chapter-03` | 🚧 Next |
 | [v0.9](#v09-enterprise-flutter) | Enterprise Flutter | Part 5, CI/CD, release | `release/v1.0` | ⬜ Planned |
 | [v1.0](#v10-complete-engineering-handbook) | Complete Handbook | Part 6, appendix, editorial pass | `release/v1.0` | ⬜ Planned |
 
@@ -134,13 +134,13 @@ name the operational cost of pinning before shipping it. ✅
 
 Measure, then fix. Mostly about measuring.
 
-- [ ] Rendering — rebuild scope, RepaintBoundary, shader jank, list performance
-- [ ] Memory — leak sources, image cache, DevTools memory view, leak tests
-- [ ] Build size — `--analyze-size`, split ABIs, asset subsetting, deferred components
-- [ ] Profiling — the reproduce/measure/change-one-thing loop, UI vs raster thread
+- [x] Rendering — rebuild scope, RepaintBoundary, shader jank, list performance
+- [x] Memory — leak sources, image cache, DevTools memory view, leak tests
+- [x] Build size — `--analyze-size`, split ABIs, asset subsetting, deferred components
+- [x] Profiling — the reproduce/measure/change-one-thing loop, UI vs raster thread
 
 **Done when:** a reader has a repeatable workflow for finding the cause of a dropped
-frame, and reports numbers with the device named.
+frame, and reports numbers with the device named. ✅
 
 ---
 

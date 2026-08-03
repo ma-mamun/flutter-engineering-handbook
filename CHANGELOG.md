@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] — 2026-08-04
+
+**Performance.** Measure, then fix — with the measuring given more space than
+the fixing.
+
+### Added
+
+- `performance-profiling.md` — why debug numbers are not just scaled but
+  distorted, the six-step workflow, what each DevTools view answers, frame
+  budgets at 60/90/120 Hz, startup tracing, and automated regression checks that
+  assert on percentiles rather than averages.
+- `performance-rendering.md` — rebuild scope first (const, widget classes over
+  helper methods, the `child` argument, `select`, moving `setState` down),
+  `RepaintBoundary` with its cost and how to verify it earned its place, list and
+  scroll rules, image decode sizing, a table of expensive effects and cheaper
+  alternatives, and shader jank under Impeller.
+- `performance-memory.md` — the retaining chain that makes one timer hold a whole
+  page, a table of leak sources with fixes, the snapshot-diff workflow, the image
+  cache and why decoded size is width × height × 4, leak detection in tests, and
+  reading platform memory.
+- `performance-build-size.md` — measuring and diffing with `--analyze-size`, what
+  a Flutter app is made of, app bundles versus split APKs, assets and fonts as
+  the usual largest win, dependency auditing, deferred components and when they
+  are not repaid, and realistic targets.
+
 ## [0.6.0] — 2026-08-04
 
 **Security.** The binary runs on the attacker's device; the pages are written
@@ -187,7 +212,8 @@ than plumbing.
 - Moved diagrams and images under `docs/`, split `assets/` into logo, banner,
   and social.
 
-[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.3.0...v0.4.0
