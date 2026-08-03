@@ -1,0 +1,168 @@
+site_name: Flutter Engineering Handbook
+site_description: A comprehensive open-source handbook for Flutter engineers — fundamentals to enterprise architecture.
+site_author: Flutter Engineering Handbook contributors
+repo_url: https://github.com/ma-mamun/flutter-engineering-handbook
+repo_name: flutter-engineering-handbook
+edit_uri: edit/main/docs/
+copyright: Released under the MIT License
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - getting-started/index.md
+      - Environment Setup: getting-started/environment.md
+      - Project Structure: getting-started/project-structure.md
+      - Tooling: getting-started/tooling.md
+  - Dart:
+      - dart/index.md
+      - Language Essentials: dart/language-essentials.md
+      - Null Safety: dart/null-safety.md
+      - Async & Concurrency: dart/async.md
+      - Isolates: dart/isolates.md
+  - Flutter Framework:
+      - framework/index.md
+      - Rendering Pipeline: framework/rendering-pipeline.md
+      - Widget Lifecycle: framework/widget-lifecycle.md
+      - Elements, Keys & Trees: framework/elements-and-keys.md
+      - Constraints & Layout: framework/layout.md
+  - Architecture:
+      - architecture/index.md
+      - Clean Architecture: architecture/clean-architecture.md
+      - Dependency Injection: architecture/dependency-injection.md
+      - Navigation: architecture/navigation.md
+      - Error Handling: architecture/error-handling.md
+  - State Management:
+      - state-management/index.md
+      - Choosing an Approach: state-management/choosing.md
+      - Riverpod: state-management/riverpod.md
+      - BLoC: state-management/bloc.md
+  - Data:
+      - data/index.md
+      - Networking: data/networking.md
+      - Offline First: data/offline-first.md
+      - SQLite: data/sqlite.md
+      - Drift: data/drift.md
+      - Isar: data/isar.md
+      - Hive: data/hive.md
+  - Security:
+      - security/index.md
+      - Secure Storage: security/storage.md
+      - Network Security: security/network.md
+      - Obfuscation & Hardening: security/hardening.md
+  - Performance:
+      - performance/index.md
+      - Rendering: performance/rendering.md
+      - Memory: performance/memory.md
+      - Build Size: performance/build-size.md
+      - Profiling: performance/profiling.md
+  - Testing:
+      - testing/index.md
+      - Unit Tests: testing/unit.md
+      - Widget Tests: testing/widget.md
+      - Integration Tests: testing/integration.md
+      - Golden Tests: testing/golden.md
+  - Native Integration:
+      - native/index.md
+      - Platform Channels: native/platform-channels.md
+      - Dart FFI: native/ffi.md
+      - Writing Plugins: native/plugins.md
+  - CI/CD:
+      - ci-cd/index.md
+      - GitHub Actions: ci-cd/github-actions.md
+      - Flavors: ci-cd/flavors.md
+      - Release Process: ci-cd/release.md
+  - Enterprise Flutter:
+      - enterprise/index.md
+      - Modularization: enterprise/modularization.md
+      - Team Workflow: enterprise/team-workflow.md
+      - Observability: enterprise/observability.md
+  - Interviews:
+      - interviews/index.md
+      - System Design: interviews/system-design.md
+      - Coding Round: interviews/coding-round.md
+      - HR Round: interviews/hr-round.md
+  - Contributing: contributing.md
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+        - .
+        - code
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ma-mamun/flutter-engineering-handbook
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn

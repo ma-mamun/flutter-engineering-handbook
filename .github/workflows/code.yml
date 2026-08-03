@@ -1,0 +1,52 @@
+name: Code
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - "code/**"
+      - "examples/**"
+      - ".github/workflows/code.yml"
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "code/**"
+      - "examples/**"
+      - ".github/workflows/code.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: code-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    name: Format, analyze, test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: code
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      # Snippets are embedded verbatim into the docs, so unformatted code ships
+      # unformatted to every reader.
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Test
+        run: flutter test testing

@@ -1,0 +1,34 @@
+%% Layer dependencies for the architecture section.
+%% Arrows point in the direction a layer is allowed to depend.
+%% Render: mermaid fences in docs pages, or `mmdc -i architecture-layers.mmd -o out.svg`.
+graph TD
+    subgraph Presentation
+        W[Widgets]
+        C[Controllers / Notifiers]
+    end
+
+    subgraph Domain
+        UC[Use Cases]
+        E[Entities]
+        RA[Repository Interfaces]
+    end
+
+    subgraph Data
+        RI[Repository Implementations]
+        RDS[Remote Data Source]
+        LDS[Local Data Source]
+        DTO[DTOs / Models]
+    end
+
+    W --> C
+    C --> UC
+    UC --> RA
+    UC --> E
+    RI -.implements.-> RA
+    RI --> RDS
+    RI --> LDS
+    RDS --> DTO
+    LDS --> DTO
+
+    classDef domain fill:#eef2ff,stroke:#4f46e5,color:#1e1b4b;
+    class UC,E,RA domain;

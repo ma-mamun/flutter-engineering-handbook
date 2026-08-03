@@ -1,0 +1,22 @@
+# Lint rules for handbook code samples.
+#
+# Samples are read far more often than they are run, so the bar is stricter than a
+# typical app: everything must be explicit enough to copy without surprises.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  errors:
+    todo: ignore
+
+linter:
+  rules:
+    - always_declare_return_types
+    - avoid_print
+    - prefer_final_locals
+    - prefer_single_quotes
+    - require_trailing_commas
+    - unawaited_futures

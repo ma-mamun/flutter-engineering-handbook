@@ -1,0 +1,8 @@
+# Documentation toolchain for the Flutter Engineering Handbook.
+# Install with:  pip install -r requirements.txt
+# Serve with:    mkdocs serve
+
+mkdocs==1.6.1
+mkdocs-material==9.5.44
+mkdocs-minify-plugin==0.8.0
+pymdown-extensions==10.12

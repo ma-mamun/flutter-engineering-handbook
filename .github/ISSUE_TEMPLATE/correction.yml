@@ -1,0 +1,45 @@
+name: Correction
+description: Something in the handbook is wrong, outdated, or misleading.
+title: "[correction]: "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are the most valuable contribution to this project. Thank you.
+
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Path or URL of the page.
+      placeholder: docs/performance/rendering.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Quote the passage if you can.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Docs link, issue, changelog entry, or a measurement you took.
+
+  - type: input
+    id: version
+    attributes:
+      label: Flutter / Dart version this applies to
+      placeholder: Flutter 3.27, Dart 3.6
