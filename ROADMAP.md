@@ -10,8 +10,8 @@ in GitHub milestones; this file is the plan of record.
 | [v0.3](#v03-flutter-internals) | Flutter Internals | Part 1 — framework | `feature/chapter-01` | ✅ Done |
 | [v0.4](#v04-architecture) | Architecture | Part 2 — structure, layers, state | `feature/chapter-02` | ✅ Done |
 | [v0.5](#v05-networking) | Networking | Part 3 — data and persistence | `feature/chapter-02` | ✅ Done |
-| [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | 🚧 Next |
-| [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | ⬜ Planned |
+| [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | ✅ Done |
+| [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | 🚧 Next |
 | [v0.8](#v08-testing) | Testing | Part 2 — testing | `feature/chapter-03` | ⬜ Planned |
 | [v0.9](#v09-enterprise-flutter) | Enterprise Flutter | Part 5, CI/CD, release | `release/v1.0` | ⬜ Planned |
 | [v1.0](#v10-complete-engineering-handbook) | Complete Handbook | Part 6, appendix, editorial pass | `release/v1.0` | ⬜ Planned |
@@ -119,12 +119,12 @@ losing a write, and pick a local database for a stated workload. ✅
 
 The binary runs on the attacker's device. Plan accordingly.
 
-- [ ] Secure storage — Keychain, Keystore, token rotation, biometric gating
-- [ ] Network security — TLS, pinning and its rotation risk, secrets off the client
-- [ ] Obfuscation and hardening — symbol files, integrity checks and their limits
+- [x] Secure storage — Keychain, Keystore, token rotation, biometric gating
+- [x] Network security — TLS, pinning and its rotation risk, secrets off the client
+- [x] Obfuscation and hardening — symbol files, integrity checks and their limits
 
 **Done when:** a reader can state what each measure does and does not prevent, and
-name the operational cost of pinning before shipping it.
+name the operational cost of pinning before shipping it. ✅
 
 ---
 
