@@ -63,6 +63,7 @@ nav:
       - Choosing State Management: part-02-professional/state-management-choosing.md
       - Riverpod: part-02-professional/state-management-riverpod.md
       - BLoC: part-02-professional/state-management-bloc.md
+      - Anti-patterns: part-02-professional/anti-patterns.md
       - Unit Tests: part-02-professional/testing-unit.md
       - Widget Tests: part-02-professional/testing-widget.md
       - Integration Tests: part-02-professional/testing-integration.md

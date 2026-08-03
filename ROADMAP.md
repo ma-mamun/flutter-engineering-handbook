@@ -8,8 +8,8 @@ in GitHub milestones; this file is the plan of record.
 | [v0.1](#v01-repository-foundation) | Repository Foundation | Structure, tooling, CI | `main` | ✅ Done |
 | [v0.2](#v02-dart-mastery) | Dart Mastery | Part 1 — language | `feature/chapter-01` | ✅ Done |
 | [v0.3](#v03-flutter-internals) | Flutter Internals | Part 1 — framework | `feature/chapter-01` | ✅ Done |
-| [v0.4](#v04-architecture) | Architecture | Part 2 — structure, layers, state | `feature/chapter-02` | 🚧 Next |
-| [v0.5](#v05-networking) | Networking | Part 3 — data and persistence | `feature/chapter-02` | ⬜ Planned |
+| [v0.4](#v04-architecture) | Architecture | Part 2 — structure, layers, state | `feature/chapter-02` | ✅ Done |
+| [v0.5](#v05-networking) | Networking | Part 3 — data and persistence | `feature/chapter-02` | 🚧 Next |
 | [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | ⬜ Planned |
 | [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | ⬜ Planned |
 | [v0.8](#v08-testing) | Testing | Part 2 — testing | `feature/chapter-03` | ⬜ Planned |
@@ -79,18 +79,19 @@ a given widget rebuilt. ✅
 
 How an app is put together and how its state moves.
 
-- [ ] Project structure — feature-first vs layer-first, when to split packages
-- [ ] Tooling — analyzer, formatter, code generation
-- [ ] Clean Architecture — layers, entities vs DTOs, when it is overkill
-- [ ] Dependency injection — constructor first, get_it, scoping, testing seams
-- [ ] Navigation — go_router, deep links, auth guards
-- [ ] Error handling — Result vs exceptions, zone guards, crash reporting
-- [ ] Choosing a state management approach — the decision guide
-- [ ] Riverpod — providers, AsyncNotifier, scoping, anti-patterns
-- [ ] BLoC — Cubit vs Bloc, event transformers, when the ceremony pays off
+- [x] Project structure — feature-first vs layer-first, when to split packages
+- [x] Tooling — analyzer, formatter, code generation
+- [x] Clean Architecture — layers, entities vs DTOs, when it is overkill
+- [x] Dependency injection — constructor first, get_it, scoping, testing seams
+- [x] Navigation — go_router, deep links, auth guards
+- [x] Error handling — Result vs exceptions, zone guards, crash reporting
+- [x] Choosing a state management approach — the decision guide
+- [x] Riverpod — providers, AsyncNotifier, scoping, anti-patterns
+- [x] BLoC — Cubit vs Bloc, event transformers, when the ceremony pays off
+- [x] Anti-patterns — added to scope: the failures, their mechanisms, and the fixes
 
 **Done when:** a reader can defend a layering and a state management choice against the
-alternatives, with tradeoffs named rather than asserted.
+alternatives, with tradeoffs named rather than asserted. ✅
 
 ---
 

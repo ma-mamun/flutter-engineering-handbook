@@ -7,6 +7,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] — 2026-08-04
+
+**Architecture.** Part 2's structure and state pages: how an app is put together
+and how its state moves, with the cost of every recommendation named.
+
+### Added
+
+- `project-structure.md` — feature-first versus layer-first and why, the rules
+  that keep it working, when to split into packages, naming conventions.
+- `tooling.md` — a strict `analysis_options.yaml`, formatting in CI, code
+  generation and its build-time cost, the CLI worth knowing.
+- `clean-architecture.md` — the three layers and the inward dependency rule,
+  entity versus DTO versus model, when use cases earn their keep, avoiding
+  circular dependencies, SOLID in Flutter terms, and when it is all overkill.
+- `dependency-injection.md` — constructor injection first, the composition root,
+  `get_it` versus Riverpod providers, scoping and lifetimes, testing seams.
+- `navigation.md` — Navigator 1.0 versus declarative, a full `go_router` table
+  with guards, typed routes, deep links on both platforms, testing navigation.
+- `error-handling.md` — exceptions inside a layer and `Result` at boundaries, a
+  failure taxonomy, `FlutterError.onError` and `PlatformDispatcher.onError`,
+  error boundaries in the widget tree.
+- `state-management-choosing.md` — ephemeral versus shared state, a comparison
+  across five approaches, the honest case against Provider and GetX, migration
+  costs.
+- `state-management-riverpod.md` — provider types, `watch`/`read`/`listen`,
+  `AsyncValue`, scoping and disposal, testing, six anti-patterns.
+- `state-management-bloc.md` — Cubit versus Bloc, event transformers, state
+  design and equality, `BlocObserver`, and the cost stated plainly.
+- `anti-patterns.md` — new page: twelve failures with their mechanisms and
+  smallest fixes.
+- Samples: `code/architecture/user_feature.dart` (one feature across all four
+  layers), `riverpod_user.dart` (`AsyncNotifier` with optimistic update and
+  rollback), `bloc_search.dart` (Cubit, plus a Bloc with a debounced
+  `restartable` transformer). Tests cover the mapper boundary, cache-before-
+  network, optimistic rollback, and that a burst of keystrokes produces one
+  request.
+
+### Changed
+
+- Added `flutter_riverpod`, `flutter_bloc` and `bloc_concurrency` to the samples
+  package so the state management code is compiled and tested, not illustrative.
+- Part 2 index rewritten as a landing page.
+
 ## [0.3.0] — 2026-08-04
 
 **Flutter Internals.** Part 1's framework half — the material senior interviews
@@ -90,7 +133,8 @@ than plumbing.
 - Moved diagrams and images under `docs/`, split `assets/` into logo, banner,
   and social.
 
-[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/ma-mamun/flutter-engineering-handbook/releases/tag/v0.1.0
