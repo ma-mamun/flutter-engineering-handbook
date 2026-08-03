@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 /// The smallest state management that works: [ValueNotifier] plus
@@ -44,7 +43,8 @@ class _CounterPageState extends State<CounterPage> {
         child: ValueListenableBuilder<int>(
           valueListenable: _controller,
           builder: (BuildContext context, int count, Widget? child) {
-            return Text('$count', style: Theme.of(context).textTheme.displayMedium);
+            final TextStyle? style = Theme.of(context).textTheme.displayMedium;
+            return Text('$count', style: style);
           },
         ),
       ),

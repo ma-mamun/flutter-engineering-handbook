@@ -35,7 +35,8 @@ void main() {
     });
   });
 
-  testWidgets('CounterPage renders and increments on tap', (WidgetTester tester) async {
+  testWidgets('CounterPage renders and increments on tap',
+      (WidgetTester tester) async {
     await tester.pumpWidget(const MaterialApp(home: CounterPage()));
 
     expect(find.text('0'), findsOneWidget);
