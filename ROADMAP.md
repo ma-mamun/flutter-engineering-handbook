@@ -12,8 +12,8 @@ in GitHub milestones; this file is the plan of record.
 | [v0.5](#v05-networking) | Networking | Part 3 — data and persistence | `feature/chapter-02` | ✅ Done |
 | [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | ✅ Done |
 | [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | ✅ Done |
-| [v0.8](#v08-testing) | Testing | Part 2 — testing | `feature/chapter-03` | 🚧 Next |
-| [v0.9](#v09-enterprise-flutter) | Enterprise Flutter | Part 5, CI/CD, release | `release/v1.0` | ⬜ Planned |
+| [v0.8](#v08-testing) | Testing | Part 2 — testing | `feature/chapter-03` | ✅ Done |
+| [v0.9](#v09-enterprise-flutter) | Enterprise Flutter | Part 5, native, CI/CD, release | `release/v1.0` | 🚧 Next |
 | [v1.0](#v10-complete-engineering-handbook) | Complete Handbook | Part 6, appendix, editorial pass | `release/v1.0` | ⬜ Planned |
 
 Each release ships when its **done when** line is true, not when its checkboxes are all
@@ -150,13 +150,13 @@ frame, and reports numbers with the device named. ✅
 
 A suite people trust and actually run.
 
-- [ ] Unit tests — testable structure, mocks vs fakes, async, coverage as signal
-- [ ] Widget tests — finders, matchers, pump vs pumpAndSettle, injecting dependencies
-- [ ] Integration tests — real flows, device farms, reducing flakiness
-- [ ] Golden tests — setup, font loading, CI rendering differences, updating goldens
+- [x] Unit tests — testable structure, mocks vs fakes, async, coverage as signal
+- [x] Widget tests — finders, matchers, pump vs pumpAndSettle, injecting dependencies
+- [x] Integration tests — real flows, device farms, reducing flakiness
+- [x] Golden tests — setup, font loading, CI rendering differences, updating goldens
 
 **Done when:** a reader can diagnose a flaky test rather than retry it, and knows which
-level to test a given behaviour at.
+level to test a given behaviour at. ✅
 
 ---
 
