@@ -7,6 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] — 2026-08-04
+
+**Complete Engineering Handbook.** Every page has content; no page is an outline.
+
+### Added
+
+- `part-06-interviews/system-design.md` — a six-step framework, the six constraints
+  that make mobile design different, and five worked examples (chat, banking, ride
+  sharing, offline POS, e-commerce) with the signals interviewers listen for.
+- `part-06-interviews/coding-round.md` — the recurring tasks and what each grades,
+  how to run a live hour, what take-homes are actually scored on, and debugging and
+  code-review exercises with the priority order to state findings in.
+- `part-06-interviews/flutter-questions.md` — questions by level with compressed
+  answers linked to the mechanism, plus the six answers most often memorised
+  without understanding.
+- `part-06-interviews/hr-round.md` — six stories rather than thirty answers, STAR
+  used properly, levelling by scope, questions worth asking them, compensation, and
+  a full five-round mock loop.
+- `appendix/glossary.md` — every term the handbook uses, grouped and linked.
+- `appendix/tooling-reference.md` — every command and flag from all six parts.
+- `appendix/resources.md` — sources with what each is good for, and a checklist for
+  evaluating a package.
+- `cheatsheets/` — widget lifecycle, testing, and a performance checklist ordered so
+  the first question is always which thread is over budget.
+- Part 6, appendix and cheatsheet index pages.
+
+### Changed
+
+- Home page status: v1.0 complete rather than active development.
+- Roadmap marked complete; all ten releases shipped.
+
 ## [0.9.0] — 2026-08-04
 
 **Enterprise Flutter.** Native integration, the release pipeline, and everything
@@ -278,7 +309,8 @@ than plumbing.
 - Moved diagrams and images under `docs/`, split `assets/` into logo, banner,
   and social.
 
-[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.9.0...HEAD
+[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.9.0...v1.0.0
 [0.9.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.6.0...v0.7.0

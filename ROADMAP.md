@@ -1,7 +1,8 @@
 # Roadmap
 
-Ten releases, each one a coherent slice a reader can use on its own. Progress is tracked
-in GitHub milestones; this file is the plan of record.
+Ten releases, each one a coherent slice a reader can use on its own. **All ten have
+shipped** — v1.0 is complete. This file remains the plan of record; further work is
+listed under [Ongoing](#ongoing).
 
 | Version | Theme | Covers | Branch | Status |
 | --- | --- | --- | --- | --- |
@@ -14,7 +15,7 @@ in GitHub milestones; this file is the plan of record.
 | [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | ✅ Done |
 | [v0.8](#v08-testing) | Testing | Part 2 — testing | `feature/chapter-03` | ✅ Done |
 | [v0.9](#v09-enterprise-flutter) | Enterprise Flutter | Part 5, native, CI/CD, release | `release/v1.0` | ✅ Done |
-| [v1.0](#v10-complete-engineering-handbook) | Complete Handbook | Part 6, appendix, editorial pass | `release/v1.0` | 🚧 Next |
+| [v1.0](#v10-complete-engineering-handbook) | Complete Handbook | Part 6, appendix, editorial pass | `release/v1.0` | ✅ Done |
 
 Each release ships when its **done when** line is true, not when its checkboxes are all
 ticked — a page that exists but says nothing useful does not count.
@@ -184,16 +185,16 @@ release-day scramble, and roll it back if it goes wrong. ✅
 
 > Branch: `release/v1.0` · Part 6, appendix, cheatsheets
 
-- [ ] Mobile system design — a framework plus worked examples
-- [ ] Coding round — live tasks, take-homes, internals questions
-- [ ] Question bank — by level, each with what a strong answer contains
-- [ ] HR round — STAR answers, levelling, negotiation
-- [ ] Appendix — glossary, further reading, tooling reference
-- [ ] Cheatsheets — lifecycle, testing, performance checklist
-- [ ] Full editorial pass against the style guide
+- [x] Mobile system design — a framework plus five worked examples
+- [x] Coding round — live tasks, take-homes, debugging and review exercises
+- [x] Question bank — by level, each with what a strong answer contains
+- [x] HR round — six stories, levelling by scope, negotiation
+- [x] Appendix — glossary, further reading, tooling reference
+- [x] Cheatsheets — lifecycle, testing, performance checklist
+- [x] Full editorial pass against the style guide
 
 **Done when:** every page has content, no page is marked *Draft*, and `mkdocs build
---strict` is clean.
+--strict` is clean. ✅
 
 ---
 
