@@ -7,6 +7,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.9.0] — 2026-08-04
+
+**Enterprise Flutter.** Native integration, the release pipeline, and everything
+that changes at forty engineers.
+
+### Added
+
+- `native-platform-channels.md` — what a channel is and the two facts that shape
+  every design, MethodChannel with Kotlin and Swift sides, EventChannel with
+  `onListen`/`onCancel` as the resource lifecycle, Pigeon and what type safety
+  across three languages buys, threading and payload costs, testing.
+- `native-ffi.md` — FFI versus a channel on six axes, `ffigen`, the memory rules
+  (`asTypedList` is a view, every allocation has an owner, `NativeFinalizer` is a
+  net not a schedule), isolates, and building native code per platform.
+- `native-plugins.md` — package versus plugin, the federated structure and why
+  implementations extend rather than implement, designing a Dart API you cannot
+  change later, three levels of testing, publishing, and what counts as breaking.
+- `ci-github-actions.md` — a PR workflow with pinned SDK and concurrency
+  cancellation, caching, build jobs that archive symbols, matrix builds, secrets,
+  and six ways to keep the pipeline under ten minutes.
+- `ci-flavors.md` — Android product flavors, iOS schemes and the mismatch that
+  breaks them, `--dart-define` and why it is configuration rather than secrets,
+  one entry point over three, making the environment visible, per-flavor services.
+- `release-process.md` — versioning and build numbers, signing with Play App
+  Signing, Fastlane lanes, the staged rollout table with halt criteria, the honest
+  answer about rollback, a release checklist, and what to watch afterwards.
+- `modularization.md` — what justifies a package, monorepo layout and Melos with
+  `--diff`, public APIs, fixed versus independent versioning, build times measured
+  rather than assumed, ownership, and incremental migration.
+- `team-workflow.md` — branching matched to release cadence, merge versus rebase,
+  written review standards with an SLA, ADRs with a worked example, onboarding to
+  a shipped change in week one, Agile practices that affect engineering, and
+  technical debt as tracked work.
+- `observability.md` — crash reporting with context and verified symbolication,
+  structured logging without PII, typed analytics events and a defined schema,
+  feature flags with owners and removal dates, and what to alert on.
+- `design-systems.md` — semantic tokens in `ThemeExtension` with `lerp`, a
+  component package with no business logic, three levels of white labelling and
+  where it goes wrong, versioning a shared dependency, keeping design and code in
+  sync.
+- Part 4 and Part 5 index pages rewritten as landing pages.
+
 ## [0.8.0] — 2026-08-04
 
 **Testing.** A suite people trust and actually run.
@@ -236,7 +278,8 @@ than plumbing.
 - Moved diagrams and images under `docs/`, split `assets/` into logo, banner,
   and social.
 
-[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.8.0...HEAD
+[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.5.0...v0.6.0

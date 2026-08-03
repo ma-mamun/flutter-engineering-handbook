@@ -13,8 +13,8 @@ in GitHub milestones; this file is the plan of record.
 | [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | ✅ Done |
 | [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | ✅ Done |
 | [v0.8](#v08-testing) | Testing | Part 2 — testing | `feature/chapter-03` | ✅ Done |
-| [v0.9](#v09-enterprise-flutter) | Enterprise Flutter | Part 5, native, CI/CD, release | `release/v1.0` | 🚧 Next |
-| [v1.0](#v10-complete-engineering-handbook) | Complete Handbook | Part 6, appendix, editorial pass | `release/v1.0` | ⬜ Planned |
+| [v0.9](#v09-enterprise-flutter) | Enterprise Flutter | Part 5, native, CI/CD, release | `release/v1.0` | ✅ Done |
+| [v1.0](#v10-complete-engineering-handbook) | Complete Handbook | Part 6, appendix, editorial pass | `release/v1.0` | 🚧 Next |
 
 Each release ships when its **done when** line is true, not when its checkboxes are all
 ticked — a page that exists but says nothing useful does not count.
@@ -166,16 +166,17 @@ level to test a given behaviour at. ✅
 
 What changes at forty engineers and a five-year horizon.
 
-- [ ] Modularization — Melos, package boundaries, build times, dependency rules
-- [ ] Team workflow — branching, review standards, ADRs, onboarding
-- [ ] Observability — crash symbolication, structured logging, analytics, feature flags
-- [ ] Design systems — theme extensions, component packages, versioning
-- [ ] GitHub Actions — caching, matrix builds, keeping CI under ten minutes
-- [ ] Flavors — Android flavors, iOS schemes, `--dart-define`, per-flavor config
-- [ ] Release process — versioning, signing, staged rollout, rollback
+- [x] Modularization — Melos, package boundaries, build times, dependency rules
+- [x] Team workflow — branching, review standards, ADRs, onboarding
+- [x] Observability — crash symbolication, structured logging, analytics, feature flags
+- [x] Design systems — theme extensions, component packages, versioning, white label
+- [x] GitHub Actions — caching, matrix builds, keeping CI under ten minutes
+- [x] Flavors — Android flavors, iOS schemes, `--dart-define`, per-flavor config
+- [x] Release process — versioning, signing, staged rollout, rollback
+- [x] Platform channels, Dart FFI and writing plugins — moved here from v0.3
 
 **Done when:** a reader can take a green commit to a store listing without a
-release-day scramble, and roll it back if it goes wrong.
+release-day scramble, and roll it back if it goes wrong. ✅
 
 ---
 
