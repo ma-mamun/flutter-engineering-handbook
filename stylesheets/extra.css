@@ -1,0 +1,26 @@
+/* Flutter Engineering Handbook — theme overrides. */
+
+:root {
+  --md-code-font: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+/* Draft callouts should read as provisional, not alarming. */
+.md-typeset .admonition.note {
+  border-left-width: 3px;
+}
+
+/* Card grid on the home page. */
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.4rem;
+  transition: border-color 150ms, box-shadow 150ms;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.08);
+}
+
+/* Keep wide tables scrollable instead of breaking the page. */
+.md-typeset .md-typeset__table {
+  overflow-x: auto;
+}
