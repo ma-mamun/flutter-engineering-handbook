@@ -69,9 +69,10 @@ fence.
 
 ## Status
 
-🚧 **Active development.** The structure is complete; pages are being filled in. Anything
-marked *Draft* is an outline — those are the easiest places to make a first contribution.
-See the [roadmap](roadmap.md) and the [contributing guide](contributing.md).
+✅ **v1.0 — complete.** All six parts, the appendix and the cheatsheets are written; no page
+is an outline. The handbook stays a living document: corrections, measured numbers replacing
+assertions, and updates as Flutter releases land are all welcome. See the
+[roadmap](roadmap.md) and the [contributing guide](contributing.md).
 
 ## License
 
