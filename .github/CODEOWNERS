@@ -1,0 +1,26 @@
+# Code owners for the Flutter Engineering Handbook.
+#
+# The last matching pattern wins, so order matters: general rules first,
+# specific overrides after. Everyone listed here is requested for review
+# automatically when a PR touches their paths.
+
+# Default owner for everything not matched below.
+*                       @ma-mamun
+
+# Documentation content.
+/docs/                  @ma-mamun
+
+# Runnable code samples — changes here must pass format, analyze, and test.
+/code/                  @ma-mamun
+
+# Build, CI, and repository configuration.
+/.github/               @ma-mamun
+/scripts/               @ma-mamun
+/mkdocs.yml             @ma-mamun
+/requirements.txt       @ma-mamun
+
+# Project-level documents. Changes here affect contributors and licensing.
+/LICENSE                @ma-mamun
+/CODE_OF_CONDUCT.md     @ma-mamun
+/CONTRIBUTING.md        @ma-mamun
+/ROADMAP.md             @ma-mamun

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../state_management/counter_controller.dart';
+import '../flutter/counter_controller.dart';
 
 void main() {
   group('CounterController', () {

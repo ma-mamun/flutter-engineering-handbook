@@ -1,8 +1,9 @@
 site_name: Flutter Engineering Handbook
 site_description: A comprehensive open-source handbook for Flutter engineers — fundamentals to enterprise architecture.
 site_author: Flutter Engineering Handbook contributors
+site_url: https://ma-mamun.github.io/flutter-engineering-handbook/
 repo_url: https://github.com/ma-mamun/flutter-engineering-handbook
-repo_name: flutter-engineering-handbook
+repo_name: ma-mamun/flutter-engineering-handbook
 edit_uri: edit/main/docs/
 copyright: Released under the MIT License
 
@@ -39,80 +40,82 @@ theme:
 
 nav:
   - Home: index.md
-  - Getting Started:
-      - getting-started/index.md
-      - Environment Setup: getting-started/environment.md
-      - Project Structure: getting-started/project-structure.md
-      - Tooling: getting-started/tooling.md
-  - Dart:
-      - dart/index.md
-      - Language Essentials: dart/language-essentials.md
-      - Null Safety: dart/null-safety.md
-      - Async & Concurrency: dart/async.md
-      - Isolates: dart/isolates.md
-  - Flutter Framework:
-      - framework/index.md
-      - Rendering Pipeline: framework/rendering-pipeline.md
-      - Widget Lifecycle: framework/widget-lifecycle.md
-      - Elements, Keys & Trees: framework/elements-and-keys.md
-      - Constraints & Layout: framework/layout.md
-  - Architecture:
-      - architecture/index.md
-      - Clean Architecture: architecture/clean-architecture.md
-      - Dependency Injection: architecture/dependency-injection.md
-      - Navigation: architecture/navigation.md
-      - Error Handling: architecture/error-handling.md
-  - State Management:
-      - state-management/index.md
-      - Choosing an Approach: state-management/choosing.md
-      - Riverpod: state-management/riverpod.md
-      - BLoC: state-management/bloc.md
-  - Data:
-      - data/index.md
-      - Networking: data/networking.md
-      - Offline First: data/offline-first.md
-      - SQLite: data/sqlite.md
-      - Drift: data/drift.md
-      - Isar: data/isar.md
-      - Hive: data/hive.md
-  - Security:
-      - security/index.md
-      - Secure Storage: security/storage.md
-      - Network Security: security/network.md
-      - Obfuscation & Hardening: security/hardening.md
-  - Performance:
-      - performance/index.md
-      - Rendering: performance/rendering.md
-      - Memory: performance/memory.md
-      - Build Size: performance/build-size.md
-      - Profiling: performance/profiling.md
-  - Testing:
-      - testing/index.md
-      - Unit Tests: testing/unit.md
-      - Widget Tests: testing/widget.md
-      - Integration Tests: testing/integration.md
-      - Golden Tests: testing/golden.md
-  - Native Integration:
-      - native/index.md
-      - Platform Channels: native/platform-channels.md
-      - Dart FFI: native/ffi.md
-      - Writing Plugins: native/plugins.md
-  - CI/CD:
-      - ci-cd/index.md
-      - GitHub Actions: ci-cd/github-actions.md
-      - Flavors: ci-cd/flavors.md
-      - Release Process: ci-cd/release.md
-  - Enterprise Flutter:
-      - enterprise/index.md
-      - Modularization: enterprise/modularization.md
-      - Team Workflow: enterprise/team-workflow.md
-      - Observability: enterprise/observability.md
-  - Interviews:
-      - interviews/index.md
-      - System Design: interviews/system-design.md
-      - Coding Round: interviews/coding-round.md
-      - HR Round: interviews/hr-round.md
-  - Contributing: contributing.md
+  - Getting Started: getting-started.md
+  - Part 1 — Foundations:
+      - part-01-foundations/index.md
+      - Dart Language Essentials: part-01-foundations/dart-language-essentials.md
+      - Null Safety: part-01-foundations/dart-null-safety.md
+      - Async & Concurrency: part-01-foundations/dart-async.md
+      - Isolates: part-01-foundations/dart-isolates.md
+      - Widgets, Elements & Render Objects: part-01-foundations/flutter-three-trees.md
+      - Rendering Pipeline: part-01-foundations/rendering-pipeline.md
+      - Widget Lifecycle: part-01-foundations/widget-lifecycle.md
+      - Constraints & Layout: part-01-foundations/constraints-and-layout.md
+  - Part 2 — Professional:
+      - part-02-professional/index.md
+      - Project Structure: part-02-professional/project-structure.md
+      - Tooling: part-02-professional/tooling.md
+      - Clean Architecture: part-02-professional/clean-architecture.md
+      - Dependency Injection: part-02-professional/dependency-injection.md
+      - Navigation: part-02-professional/navigation.md
+      - Error Handling: part-02-professional/error-handling.md
+      - Choosing State Management: part-02-professional/state-management-choosing.md
+      - Riverpod: part-02-professional/state-management-riverpod.md
+      - BLoC: part-02-professional/state-management-bloc.md
+      - Unit Tests: part-02-professional/testing-unit.md
+      - Widget Tests: part-02-professional/testing-widget.md
+      - Integration Tests: part-02-professional/testing-integration.md
+      - Golden Tests: part-02-professional/testing-golden.md
+  - Part 3 — Data:
+      - part-03-data/index.md
+      - Networking: part-03-data/networking.md
+      - Offline First: part-03-data/offline-first.md
+      - SQLite: part-03-data/sqlite.md
+      - Drift: part-03-data/drift.md
+      - Isar: part-03-data/isar.md
+      - Hive: part-03-data/hive.md
+  - Part 4 — Production:
+      - part-04-production/index.md
+      - Secure Storage: part-04-production/security-storage.md
+      - Network Security: part-04-production/security-network.md
+      - Obfuscation & Hardening: part-04-production/security-hardening.md
+      - Rendering Performance: part-04-production/performance-rendering.md
+      - Memory: part-04-production/performance-memory.md
+      - Build Size: part-04-production/performance-build-size.md
+      - Profiling: part-04-production/performance-profiling.md
+      - Platform Channels: part-04-production/native-platform-channels.md
+      - Dart FFI: part-04-production/native-ffi.md
+      - Writing Plugins: part-04-production/native-plugins.md
+      - GitHub Actions: part-04-production/ci-github-actions.md
+      - Flavors: part-04-production/ci-flavors.md
+      - Release Process: part-04-production/release-process.md
+  - Part 5 — Enterprise:
+      - part-05-enterprise/index.md
+      - Modularization: part-05-enterprise/modularization.md
+      - Team Workflow: part-05-enterprise/team-workflow.md
+      - Observability: part-05-enterprise/observability.md
+      - Design Systems: part-05-enterprise/design-systems.md
+  - Part 6 — Interviews:
+      - part-06-interviews/index.md
+      - Mobile System Design: part-06-interviews/system-design.md
+      - Coding Round: part-06-interviews/coding-round.md
+      - Question Bank: part-06-interviews/flutter-questions.md
+      - HR Round: part-06-interviews/hr-round.md
+  - Reference:
+      - Appendix:
+          - appendix/index.md
+          - Glossary: appendix/glossary.md
+          - Further Reading: appendix/resources.md
+          - Tooling Reference: appendix/tooling-reference.md
+      - Cheatsheets:
+          - cheatsheets/index.md
+          - Widget Lifecycle: cheatsheets/widget-lifecycle.md
+          - Testing: cheatsheets/testing.md
+          - Performance Checklist: cheatsheets/performance-checklist.md
+  - Project:
+      - Roadmap: roadmap.md
+      - Contributing: contributing.md
+      - Style Guide: style-guide.md
 
 markdown_extensions:
   - abbr
@@ -162,7 +165,11 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/ma-mamun/flutter-engineering-handbook
 
+exclude_docs: |
+  diagrams/README.md
+
 validation:
   omitted_files: warn
   absolute_links: warn
   unrecognized_links: warn
+  anchors: warn

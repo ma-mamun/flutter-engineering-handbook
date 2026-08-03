@@ -8,19 +8,25 @@
 
 ## Type of change
 
-- [ ] Content — new section or page
+- [ ] Content — new page or section
 - [ ] Correction — something was wrong or out of date
 - [ ] Code sample
 - [ ] Tooling / CI
 - [ ] Other
 
+## How it was verified
+
+<!-- Say what you ran and what you saw. "./scripts/check.sh passes" is enough for most
+     PRs; for a measured claim, give the device and the numbers. -->
+
 ## Checklist
 
-- [ ] `mkdocs build --strict` passes locally
-- [ ] Dart changes pass `dart format` and `flutter analyze` (run from `code/`)
-- [ ] New recommendations state their tradeoff
+- [ ] `./scripts/check.sh` passes locally
+- [ ] New pages are added to the `nav` in `mkdocs.yml`
+- [ ] New recommendations state their tradeoff (see the [style guide](../docs/style-guide.md))
+- [ ] Code samples live in `code/` and are embedded, not pasted
 - [ ] Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/)
-- [ ] Nav in `mkdocs.yml` updated if pages were added or moved
+- [ ] PR targets `develop`, not `main`
 
 ## Related issues
 

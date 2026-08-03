@@ -1,0 +1,53 @@
+version: 2
+
+updates:
+  # Documentation toolchain (MkDocs, Material, extensions).
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: monthly
+      day: monday
+      time: "06:00"
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - documentation
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      # One PR for the whole docs stack — these versions move together, and
+      # reviewing them separately means testing the same site build five times.
+      mkdocs:
+        patterns:
+          - "mkdocs*"
+          - "pymdown-extensions"
+
+  # Dart and Flutter dependencies for the code samples.
+  - package-ecosystem: pub
+    directory: /code
+    schedule:
+      interval: monthly
+      day: monday
+      time: "06:00"
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - code
+    commit-message:
+      prefix: chore
+      include: scope
+
+  # The actions used by the deploy workflow.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+      day: monday
+      time: "06:00"
+    labels:
+      - dependencies
+      - ci
+    commit-message:
+      prefix: ci
+      include: scope
