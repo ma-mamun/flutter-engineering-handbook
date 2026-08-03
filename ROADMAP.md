@@ -6,8 +6,8 @@ in GitHub milestones; this file is the plan of record.
 | Version | Theme | Covers | Branch | Status |
 | --- | --- | --- | --- | --- |
 | [v0.1](#v01-repository-foundation) | Repository Foundation | Structure, tooling, CI | `main` | ✅ Done |
-| [v0.2](#v02-dart-mastery) | Dart Mastery | Part 1 — language | `feature/chapter-01` | 🚧 Next |
-| [v0.3](#v03-flutter-internals) | Flutter Internals | Part 1 — framework, native | `feature/chapter-01` | ⬜ Planned |
+| [v0.2](#v02-dart-mastery) | Dart Mastery | Part 1 — language | `feature/chapter-01` | ✅ Done |
+| [v0.3](#v03-flutter-internals) | Flutter Internals | Part 1 — framework, native | `feature/chapter-01` | 🚧 Next |
 | [v0.4](#v04-architecture) | Architecture | Part 2 — structure, layers, state | `feature/chapter-02` | ⬜ Planned |
 | [v0.5](#v05-networking) | Networking | Part 3 — data and persistence | `feature/chapter-02` | ⬜ Planned |
 | [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | ⬜ Planned |
@@ -45,13 +45,13 @@ asking how anything works. ✅
 
 The language, and specifically the parts Flutter leans on hardest.
 
-- [ ] Language essentials — records, patterns, sealed classes, extensions
-- [ ] Null safety — soundness, `late`, migration, why `!` is a design smell
-- [ ] Async and concurrency — event loop, microtask queue, Future vs Stream
-- [ ] Isolates — the model, `compute()` vs long-lived, when you actually need one
+- [x] Language essentials — records, patterns, sealed classes, extensions
+- [x] Null safety — soundness, `late`, migration, why `!` is a design smell
+- [x] Async and concurrency — event loop, microtask queue, Future vs Stream
+- [x] Isolates — the model, `compute()` vs long-lived, when you actually need one
 
 **Done when:** a reader can predict the output order of interleaved `await`, microtask,
-and timer callbacks, and explain why.
+and timer callbacks, and explain why. ✅ — the ordering is asserted by a test, not claimed.
 
 ---
 
