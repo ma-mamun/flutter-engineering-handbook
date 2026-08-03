@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] — 2026-08-04
+
+**Security.** The binary runs on the attacker's device; the pages are written
+from that assumption.
+
+### Added
+
+- `security-storage.md` — what each store actually is, `flutter_secure_storage`
+  options that are usually wrong (iOS accessibility, Android backing), handling
+  an invalidated Keystore key, what to store and for how long, biometric gating
+  and why the returned boolean is not a control, and five things encryption at
+  rest does not protect.
+- `security-network.md` — platform HTTPS enforcement on both sides, certificate
+  pinning with its full operational cost (two pins, a kill switch, rehearsed
+  rotation), why secrets cannot live in the client and what to do instead,
+  detecting interception honestly, and a pre-release checklist.
+- `security-hardening.md` — `--obfuscate --split-debug-info` and symbol
+  management, R8 keep rules and the release-only crash they prevent, root
+  detection's value and limits, Play Integrity and App Attest as the controls
+  that verify server-side, and a ranked list of where security effort actually
+  belongs.
+
 ## [0.5.0] — 2026-08-04
 
 **Networking and data.** Part 3 in full — the layer where production bugs live.
@@ -165,7 +187,8 @@ than plumbing.
 - Moved diagrams and images under `docs/`, split `assets/` into logo, banner,
   and social.
 
-[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.2.0...v0.3.0
