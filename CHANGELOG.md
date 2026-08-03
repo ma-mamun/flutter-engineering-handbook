@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.0] — 2026-08-04
+
+**Testing.** A suite people trust and actually run.
+
+### Added
+
+- `testing-unit.md` — structuring logic so it can be tested, injecting time and
+  randomness, fakes versus mocks with a comparison table, async patterns
+  including `fake_async` and `Completer`-controlled timing, `setUp` over
+  `setUpAll`, and coverage as signal rather than target.
+- `testing-widget.md` — the shape of a widget test, `pump` versus
+  `pumpAndSettle` and why the latter times out on indefinite animations, finders
+  ranked by how well they survive refactors, injecting dependencies, screen size
+  and plugin stubbing, behaviour over implementation, and accessibility
+  guidelines.
+- `testing-integration.md` — setup and what belongs at this level, backend
+  choices from fakes to staging, the six sources of flakiness with fixes, device
+  farms and a per-PR/nightly split, recording performance during a flow, and a
+  rule about retries.
+- `testing-golden.md` — what goldens catch that nothing else does, the Ahem font
+  problem, the macOS/Linux rendering problem with three fixes, toolkit
+  comparison, reviewing changes as visual changes, uploading failure diffs from
+  CI, and making everything deterministic.
+
 ## [0.7.0] — 2026-08-04
 
 **Performance.** Measure, then fix — with the measuring given more space than
@@ -212,7 +236,8 @@ than plumbing.
 - Moved diagrams and images under `docs/`, split `assets/` into logo, banner,
   and social.
 
-[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.4.0...v0.5.0
