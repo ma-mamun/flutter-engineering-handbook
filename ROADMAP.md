@@ -9,8 +9,8 @@ in GitHub milestones; this file is the plan of record.
 | [v0.2](#v02-dart-mastery) | Dart Mastery | Part 1 — language | `feature/chapter-01` | ✅ Done |
 | [v0.3](#v03-flutter-internals) | Flutter Internals | Part 1 — framework | `feature/chapter-01` | ✅ Done |
 | [v0.4](#v04-architecture) | Architecture | Part 2 — structure, layers, state | `feature/chapter-02` | ✅ Done |
-| [v0.5](#v05-networking) | Networking | Part 3 — data and persistence | `feature/chapter-02` | 🚧 Next |
-| [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | ⬜ Planned |
+| [v0.5](#v05-networking) | Networking | Part 3 — data and persistence | `feature/chapter-02` | ✅ Done |
+| [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | 🚧 Next |
 | [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | ⬜ Planned |
 | [v0.8](#v08-testing) | Testing | Part 2 — testing | `feature/chapter-03` | ⬜ Planned |
 | [v0.9](#v09-enterprise-flutter) | Enterprise Flutter | Part 5, CI/CD, release | `release/v1.0` | ⬜ Planned |
@@ -101,15 +101,15 @@ alternatives, with tradeoffs named rather than asserted. ✅
 
 The data layer, where most production bugs live.
 
-- [ ] Networking — dio vs http, interceptors, timeouts, serialization
-- [ ] Offline first — cache strategies, outbox pattern, conflict resolution
-- [ ] SQLite — schema design, migrations without data loss, indexing
-- [ ] Drift — type-safe SQL, DAOs, schema versioning, reactive queries
-- [ ] Isar — collections, indexes, watchers, migration strategy
-- [ ] Hive — boxes, adapters, encryption, where it stops scaling
+- [x] Networking — dio vs http, interceptors, timeouts, serialization
+- [x] Offline first — cache strategies, outbox pattern, conflict resolution
+- [x] SQLite — schema design, migrations without data loss, indexing
+- [x] Drift — type-safe SQL, DAOs, schema versioning, reactive queries
+- [x] Isar — collections, indexes, watchers, migration strategy
+- [x] Hive — boxes, adapters, encryption, where it stops scaling
 
 **Done when:** a reader can design a sync layer that survives a flaky network without
-losing a write, and pick a local database for a stated workload.
+losing a write, and pick a local database for a stated workload. ✅
 
 ---
 
