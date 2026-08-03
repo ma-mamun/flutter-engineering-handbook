@@ -7,6 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] — 2026-08-04
+
+**Networking and data.** Part 3 in full — the layer where production bugs live.
+
+### Added
+
+- `networking.md` — choosing a client, one configured dio instance, how an
+  interceptor works and why order is behaviour, single-flight token refresh,
+  retry rules, timeouts versus cancellation, cursor pagination, serialisation at
+  the boundary, ETags and `Cache-Control`, PUT versus PATCH.
+- `offline-first.md` — local database as the source of truth, four read
+  strategies, the outbox pattern with transactional enqueue and client-generated
+  ids, optimistic updates with rollback, six conflict resolution policies, delta
+  sync with tombstones and cursor ordering, surfacing sync state, and what to
+  test.
+- `sqlite.md` — schema decisions for mobile, WAL and foreign-key pragmas,
+  append-only migrations and the copy-and-rename dance, indexing with
+  `EXPLAIN QUERY PLAN`, transactions and batches, and where row mapping blocks
+  the UI isolate.
+- `drift.md` — tables and compile-checked queries, reactive streams and their
+  cost, DAOs and companion semantics, the migration test harness, and running
+  the database on its own isolate.
+- `isar.md` — the document model, links and watchers, implicit migrations and
+  what they do not cover, the maintenance question, and a migration route off it.
+- `hive.md` — boxes and lazy boxes, the unforgiving adapter rules, encryption and
+  where the key belongs, and the five signals that you have outgrown it.
+- Samples with tests asserting the property rather than the happy path:
+  `code/networking/retry.dart` (backoff, jitter, no retry on a 404, idempotency),
+  `token_refresh.dart` (five concurrent 401s produce one refresh), and
+  `paginator.dart` (concurrency guard, deduplication, failed page keeps prior
+  pages).
+
 ## [0.4.0] — 2026-08-04
 
 **Architecture.** Part 2's structure and state pages: how an app is put together
@@ -133,7 +165,8 @@ than plumbing.
 - Moved diagrams and images under `docs/`, split `assets/` into logo, banner,
   and social.
 
-[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.1.0...v0.2.0
