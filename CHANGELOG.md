@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] — 2026-08-04
+
+**Flutter Internals.** Part 1's framework half — the material senior interviews
+actually probe.
+
+### Added
+
+- `part-01-foundations/flutter-three-trees.md` — widget, element and render
+  object; why the element tree exists; `Element.updateChild` and what it implies
+  about `const`; keys, including when each kind is right and what `GlobalKey`
+  costs; `BuildContext` as an element; and `StatelessWidget` versus
+  `StatefulWidget` internally.
+- `part-01-foundations/rendering-pipeline.md` — vsync to pixels, the UI/raster
+  thread split, `RepaintBoundary` and its cost, shader jank, frame budgets, and
+  the ranked list of where dropped frames come from.
+- `part-01-foundations/widget-lifecycle.md` — every `State` callback in order,
+  what belongs in each, `didUpdateWidget` versus `initState`, the `deactivate`/
+  `activate` branch, and why a `BuildContext` after an `await` crashes.
+- `part-01-foundations/constraints-and-layout.md` — the constraint model, the two
+  layout errors you will actually see, unbounded constraints, the cost of
+  intrinsics, custom layout at three levels, and slivers.
+- Samples: `code/flutter/lifecycle_probe.dart` (lifecycle order asserted by
+  test, plus the `mounted` guard), `keys_demo.dart` (the reorderable-list bug in
+  its smallest reproducing form), and `render_square.dart` (a complete custom
+  `RenderBox`: layout, paint, hit test, and marking).
+
 ## [0.2.0] — 2026-08-04
 
 **Dart Mastery.** Part 1's four language pages, written in full.
@@ -64,6 +90,7 @@ than plumbing.
 - Moved diagrams and images under `docs/`, split `assets/` into logo, banner,
   and social.
 
-[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/ma-mamun/flutter-engineering-handbook/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/ma-mamun/flutter-engineering-handbook/releases/tag/v0.1.0

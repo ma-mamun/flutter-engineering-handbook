@@ -7,8 +7,8 @@ in GitHub milestones; this file is the plan of record.
 | --- | --- | --- | --- | --- |
 | [v0.1](#v01-repository-foundation) | Repository Foundation | Structure, tooling, CI | `main` | ✅ Done |
 | [v0.2](#v02-dart-mastery) | Dart Mastery | Part 1 — language | `feature/chapter-01` | ✅ Done |
-| [v0.3](#v03-flutter-internals) | Flutter Internals | Part 1 — framework, native | `feature/chapter-01` | 🚧 Next |
-| [v0.4](#v04-architecture) | Architecture | Part 2 — structure, layers, state | `feature/chapter-02` | ⬜ Planned |
+| [v0.3](#v03-flutter-internals) | Flutter Internals | Part 1 — framework | `feature/chapter-01` | ✅ Done |
+| [v0.4](#v04-architecture) | Architecture | Part 2 — structure, layers, state | `feature/chapter-02` | 🚧 Next |
 | [v0.5](#v05-networking) | Networking | Part 3 — data and persistence | `feature/chapter-02` | ⬜ Planned |
 | [v0.6](#v06-security) | Security | Part 4 — security | `feature/chapter-03` | ⬜ Planned |
 | [v0.7](#v07-performance) | Performance | Part 4 — performance | `feature/chapter-03` | ⬜ Planned |
@@ -61,16 +61,15 @@ and timer callbacks, and explain why. ✅ — the ordering is asserted by a test
 
 How a frame is produced, and what happens at the edge of the framework.
 
-- [ ] Widgets, elements and render objects — the three trees
-- [ ] Rendering pipeline — build, layout, paint, composite
-- [ ] Widget lifecycle — every callback, in order, with its correct use
-- [ ] Constraints and layout — the constraint model, unbounded errors, custom layout
-- [ ] Platform channels — MethodChannel, EventChannel, Pigeon
-- [ ] Dart FFI — when it beats a channel, ffigen, memory ownership
-- [ ] Writing plugins — federated structure, publishing
+- [x] Widgets, elements and render objects — the three trees
+- [x] Rendering pipeline — build, layout, paint, composite
+- [x] Widget lifecycle — every callback, in order, with its correct use
+- [x] Constraints and layout — the constraint model, unbounded errors, custom layout
+
+Native integration moved to v0.9, where it sits with the rest of the platform work.
 
 **Done when:** a reader can explain what happens between `setState` and a pixel, and why
-a given widget rebuilt.
+a given widget rebuilt. ✅
 
 ---
 
