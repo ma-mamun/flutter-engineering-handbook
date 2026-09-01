@@ -11,5 +11,5 @@ mkdocs-minify-plugin==0.8.0
 # pass for every highlighted block, which fails the build with a bare
 # "'NoneType' object has no attribute 'replace'". 11.0 fixes it; keep these two
 # in step when upgrading either.
-pymdown-extensions==11.0.1
+pymdown-extensions==11.0.2
 pygments==2.20.0
