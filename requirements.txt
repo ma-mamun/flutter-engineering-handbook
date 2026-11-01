@@ -3,7 +3,7 @@
 # Serve with:    mkdocs serve
 
 mkdocs==1.6.1
-mkdocs-material==9.7.7
+mkdocs-material==9.8.0
 mkdocs-minify-plugin==0.8.0
 
 # Pygments is pinned alongside pymdown-extensions on purpose. Pygments 2.19
@@ -11,5 +11,5 @@ mkdocs-minify-plugin==0.8.0
 # pass for every highlighted block, which fails the build with a bare
 # "'NoneType' object has no attribute 'replace'". 11.0 fixes it; keep these two
 # in step when upgrading either.
-pymdown-extensions==11.0.1
+pymdown-extensions==12.3
 pygments==2.20.0
